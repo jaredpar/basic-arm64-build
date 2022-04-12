@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic.Arm64.Build", "src\Basic.Arm64.Build\Basic.Arm64.Build.csproj", "{6F1A1CCF-A1DA-409D-9831-45D0DA30C499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleExe", "src\ExampleExe\ExampleExe.csproj", "{884CCA59-3FCC-424F-8D03-BEE35B6D86AD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{6F1A1CCF-A1DA-409D-9831-45D0DA30C499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F1A1CCF-A1DA-409D-9831-45D0DA30C499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F1A1CCF-A1DA-409D-9831-45D0DA30C499}.Release|Any CPU.Build.0 = Release|Any CPU
-		{884CCA59-3FCC-424F-8D03-BEE35B6D86AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{884CCA59-3FCC-424F-8D03-BEE35B6D86AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{884CCA59-3FCC-424F-8D03-BEE35B6D86AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{884CCA59-3FCC-424F-8D03-BEE35B6D86AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
