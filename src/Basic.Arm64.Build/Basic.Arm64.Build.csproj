@@ -3,12 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <IsPackable>true</IsPackable>
+    <Description>MSBuild task that effectively multi-targets a .NET Framework exe to have an ARM64 specific output.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="basic.targets">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <!-- This line packs the single-TFM build props/targets files to the `build` folder in the generated package.
+         By convention, the .NET SDK will look for `build\<Package Id>.props` and `build\<Package Id>.targets`
+         for automatic inclusion in a single-TFM build. -->
+    <Content Include="build\*" PackagePath="build\" />
   </ItemGroup>
 
   <ItemGroup>
