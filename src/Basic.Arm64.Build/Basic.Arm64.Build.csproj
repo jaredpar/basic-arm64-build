@@ -6,6 +6,8 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <IsPackable>true</IsPackable>
     <Description>MSBuild task that effectively multi-targets a .NET Framework exe to have an ARM64 specific output.</Description>
+    <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+    <NoWarn>NU5100;NU5128</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
