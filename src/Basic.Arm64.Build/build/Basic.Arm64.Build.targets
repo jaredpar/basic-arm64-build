@@ -17,7 +17,7 @@
     <Copy
       SourceFiles="@(_BasicCopyItems)"
       OverwriteReadOnlyFiles="true"
-      UseHardlinksIfPossible="true"
+      UseHardlinksIfPossible="false"
       DestinationFolder="$(_BasicDestinationPath)" />
 
     <MakeArm64Exe
