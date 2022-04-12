@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace ExampleExe
 {
@@ -6,7 +7,7 @@ namespace ExampleExe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine($"The architecture is {RuntimeInformation.ProcessArchitecture}");
         }
     }
 }

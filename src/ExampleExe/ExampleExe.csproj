@@ -5,6 +5,12 @@
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Basic.Arm64.Build\Basic.Arm64.Build.csproj" >
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+
   <Import Project="..\Basic.Arm64.Build\bin\Debug\netstandard2.0\basic.targets" />
 
 </Project>

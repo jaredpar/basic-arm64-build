@@ -1,13 +1,17 @@
 <Project>
+  <UsingTask 
+    TaskName="Basic.Arm64.Build.MakeArm64Exe"
+    AssemblyFile="$(MSBuildThisFileDirectory)Basic.Arm64.Build.dll" />
+
   <Target Name="_BasicCreateArm64Output" AfterTargets="AfterBuild">
     <PropertyGroup>
       <_BasicSourcePath>$(OutDir)</_BasicSourcePath>
-      <_BasicSourcePath>$(_BasicSourcePath.TrimEnd('\\'))</_BasicSourcePath>
-      <_BasicDestinationPath>$(_BasicSourcePath)-arm64</_BasicDestinationPath>
+      <_BasicDestinationPath>$(_BasicSourcePath.TrimEnd('\\'))</_BasicDestinationPath>
+      <_BasicDestinationPath>$(_BasicDestinationPath)-arm64</_BasicDestinationPath>
     </PropertyGroup>
 
     <ItemGroup>
-      <_BasicCopyItems Include="$(BasicSourcePath)*.*" />
+      <_BasicCopyItems Include="$(_BasicSourcePath)*.*" />
     </ItemGroup>
 
     <Copy
@@ -15,5 +19,10 @@
       OverwriteReadOnlyFiles="true"
       UseHardlinksIfPossible="true"
       DestinationFolder="$(_BasicDestinationPath)" />
+
+    <MakeArm64Exe
+      AssemblyName="$(AssemblyName)"
+      Directory="$(_BasicDestinationPath)" />
+    
   </Target>
 </Project>
