@@ -1,0 +1,19 @@
+<Project>
+  <Target Name="_BasicCreateArm64Output" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <_BasicSourcePath>$(OutDir)</_BasicSourcePath>
+      <_BasicSourcePath>$(_BasicSourcePath.TrimEnd('\\'))</_BasicSourcePath>
+      <_BasicDestinationPath>$(_BasicSourcePath)-arm64</_BasicDestinationPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_BasicCopyItems Include="$(BasicSourcePath)*.*" />
+    </ItemGroup>
+
+    <Copy
+      SourceFiles="@(_BasicCopyItems)"
+      OverwriteReadOnlyFiles="true"
+      UseHardlinksIfPossible="true"
+      DestinationFolder="$(_BasicDestinationPath)" />
+  </Target>
+</Project>
